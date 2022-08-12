@@ -17,7 +17,6 @@ class _CircularMotionDemoState extends State<CircularMotionDemo> {
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 4.0,
         title: Text(widget.title),
       ),
       body: Center(
@@ -27,7 +26,7 @@ class _CircularMotionDemoState extends State<CircularMotionDemo> {
           alignment: Alignment.center,
           child: CircularMotion(
             centerWidget: Card(
-              color: Colors.white,
+              color: Colors.red,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(w * 2)),
               child: Container(
@@ -36,7 +35,10 @@ class _CircularMotionDemoState extends State<CircularMotionDemo> {
                 alignment: Alignment.center,
                 child: Text(
                   'Circular Motion',
-                  style: TextStyle(fontSize: w * 2),
+                  style: TextStyle(
+                    fontSize: w * 2,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -49,7 +51,10 @@ class _CircularMotionDemoState extends State<CircularMotionDemo> {
                   child: Center(
                     child: Text(
                       '$index',
-                      style: TextStyle(color: Colors.grey.shade900),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: w * 2,
+                      ),
                     ),
                   ),
                 );
